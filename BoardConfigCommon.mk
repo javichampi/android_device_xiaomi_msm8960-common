@@ -143,8 +143,7 @@ BOARD_SEPOLICY_DIRS += \
     device/xiaomi/msm8960-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
-       btnvtool.te \
-       syspart_select.te
+       btnvtool.te
 
 BOARD_USES_SECURE_SERVICES := true
 
@@ -181,18 +180,3 @@ TARGET_KERNEL_CONFIG := aries-perf_defconfig
 # Use CM PowerHAL by default
 TARGET_POWERHAL_VARIANT := cm
 endif
-
-# TWRP config
-TW_THEME := portrait_hdpi
-RECOVERY_SDCARD_ON_DATA := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-BOARD_HAS_NO_REAL_SDCARD := true
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-TW_INCLUDE_L_CRYPTO := true
-TW_FLASH_FROM_STORAGE := true
-TW_NO_USB_STORAGE := false
-
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
